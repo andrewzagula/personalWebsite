@@ -77,13 +77,86 @@
 .itemList {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+}
+
+.itemContainer {
+  border: 1px solid transparent;
+  border-radius: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.itemContainer:hover {
+  border-color: #e5e7eb;
 }
 
 .item {
   display: flex;
   align-items: center;
   gap: 16px;
+  cursor: pointer;
+  padding: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.chevron {
+  color: #9ca3af;
+  transition: transform 0.3s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chevronExpanded {
+  transform: rotate(180deg);
+}
+
+.item:hover .chevron {
+  color: #6b7280;
+}
+
+.itemDetails {
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 8px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.itemDescription {
+  color: #4b5563;
+  font-size: 14px;
+  margin: 0;
+}
+
+.itemBullets {
+  color: #4b5563;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.itemBullets li {
+  margin-bottom: 8px;
+}
+
+.itemBullets li:last-child {
+  margin-bottom: 0;
 }
 
 .itemLogo {
@@ -124,25 +197,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
 }
 
 .itemTitle {
   font-weight: 600;
   color: black;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   margin-top: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .itemSubtitle {
   color: #6b7280;
   font-size: 14px;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .itemDate {
   color: #9ca3af;
   font-size: 14px;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* Skills Section */
@@ -243,7 +323,6 @@
   font-size: 16px;
   color: #6b7280;
   margin-bottom: 32px;
-  line-height: 1.6;
   text-align: center;
 }
 
@@ -309,7 +388,6 @@
 .projectDescription {
   font-size: 14px;
   color: #4b5563;
-  line-height: 1.6;
   margin-bottom: 16px;
 }
 
@@ -391,7 +469,6 @@
 .contactText {
   font-size: 16px;
   color: #6b7280;
-  line-height: 1.6;
   text-align: center;
   margin: 0;
   max-width: 600px;
@@ -421,4 +498,111 @@
   font-size: 14px;
   color: #9ca3af;
   margin: 0;
+}
+
+/* Responsive Styles for Education, Work Experience, and Awards Items */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  .item {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .itemLogo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .itemLogoText {
+    font-size: 8px;
+  }
+
+  .itemLogoTextSmall {
+    font-size: 5px;
+  }
+
+  .itemContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .itemRight {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .itemTitle {
+    font-size: 15px;
+  }
+
+  .itemSubtitle {
+    font-size: 13px;
+  }
+
+  .itemDate {
+    font-size: 13px;
+  }
+
+  .itemDetails {
+    padding: 16px;
+    padding-top: 0;
+  }
+
+  .itemDescription {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+
+  .item {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .itemLogo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .itemLogoText {
+    font-size: 7px;
+  }
+
+  .itemLogoTextSmall {
+    font-size: 4px;
+  }
+
+  .itemTitle {
+    font-size: 14px;
+  }
+
+  .itemSubtitle {
+    font-size: 12px;
+  }
+
+  .itemDate {
+    font-size: 12px;
+  }
+
+  .chevron {
+    width: 18px;
+    height: 18px;
+  }
 }

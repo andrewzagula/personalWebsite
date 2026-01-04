@@ -5,8 +5,8 @@ import "./globals.css";
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700", "800"] });
 
 export const metadata: Metadata = {
-  title: "Archie - Frontend Developer",
-  description: "Frontend Developer portfolio",
+  title: "Andrew Zagula",
+  description: "Portfolio",
 };
 
 export default function RootLayout({

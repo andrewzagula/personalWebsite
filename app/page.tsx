@@ -1,6 +1,23 @@
+'use client';
+
+import { useState } from 'react';
 import styles from './page.module.css';
 
 export default function Home() {
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+
+  const toggleItem = (itemId: string) => {
+    setExpandedItems(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(itemId)) {
+        newSet.delete(itemId);
+      } else {
+        newSet.add(itemId);
+      }
+      return newSet;
+    });
+  };
+
   const skills = [
     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Blazor', 'Tailwind', 'Bootstrap'],
     ['Framer Motion', 'Vite', '.NET', 'Node', 'Express', 'Firebase', 'Supabase', 'MySQL', 'GitHub'],
@@ -43,31 +60,127 @@ export default function Home() {
           
           <div className={styles.itemList}>
             {/* Job 1 */}
-            <div className={styles.item}>
-              <div className={styles.itemLogo}>
-                <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>NSPIRE</span>
-              </div>
-              <div className={styles.itemContent}>
-                <div>
-                  <h3 className={styles.itemTitle}>NSPIRE Software and Technology Solutions Inc.</h3>
-                  <p className={styles.itemSubtitle}>Assistant Junior Programmer</p>
+            <div className={styles.itemContainer}>
+              <div className={styles.item} onClick={() => toggleItem('work-1')}>
+                <div className={styles.itemLogo}>
+                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>NSPIRE</span>
                 </div>
-                <span className={styles.itemDate}>Jun 2024 - Present</span>
+                <div className={styles.itemContent}>
+                  <div>
+                    <h3 className={styles.itemTitle}>Boston University</h3>
+                    <p className={styles.itemSubtitle}>Student Researcher</p>
+                  </div>
+                  <div className={styles.itemRight}>
+                    <span className={styles.itemDate}>Jun 2025 - Aug 2025</span>
+                    <svg 
+                      className={`${styles.chevron} ${expandedItems.has('work-1') ? styles.chevronExpanded : ''}`}
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
               </div>
+              {expandedItems.has('work-1') && (
+                <div className={styles.itemDetails}>
+                  {/* Add your description or bullets here */}
+                  <p className={styles.itemDescription}>
+                    Add your description here. You can write a paragraph or use bullet points below.
+                  </p>
+                  {/* Example bullets - uncomment and customize as needed */}
+                  {/* <ul className={styles.itemBullets}>
+                    <li>Responsibility or achievement 1</li>
+                    <li>Responsibility or achievement 2</li>
+                    <li>Responsibility or achievement 3</li>
+                  </ul> */}
+                </div>
+              )}
             </div>
 
             {/* Job 2 */}
-            <div className={styles.item}>
-              <div className={styles.itemLogo}>
-                <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>NSPIRE</span>
-              </div>
-              <div className={styles.itemContent}>
-                <div>
-                  <h3 className={styles.itemTitle}>NSPIRE Software and Technology Solutions Inc.</h3>
-                  <p className={styles.itemSubtitle}>UI/UX Designer Intern</p>
+            <div className={styles.itemContainer}>
+              <div className={styles.item} onClick={() => toggleItem('work-2')}>
+                <div className={styles.itemLogo}>
+                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>NSPIRE</span>
                 </div>
-                <span className={styles.itemDate}>Mar 2024 - May 2024</span>
+                <div className={styles.itemContent}>
+                  <div>
+                    <h3 className={styles.itemTitle}>University of California, Berkeley</h3>
+                    <p className={styles.itemSubtitle}>Researcher</p>
+                  </div>
+                  <div className={styles.itemRight}>
+                    <span className={styles.itemDate}>Mar 2024 - May 2024</span>
+                    <svg 
+                      className={`${styles.chevron} ${expandedItems.has('work-2') ? styles.chevronExpanded : ''}`}
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
               </div>
+              {expandedItems.has('work-2') && (
+                <div className={styles.itemDetails}>
+                  <p className={styles.itemDescription}>
+                    Add your description here. You can write a paragraph or use bullet points below.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Job 3 */}
+            <div className={styles.itemContainer}>
+              <div className={styles.item} onClick={() => toggleItem('work-3')}>
+                <div className={styles.itemLogo}>
+                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>NSPIRE</span>
+                </div>
+                <div className={styles.itemContent}>
+                  <div>
+                    <h3 className={styles.itemTitle}>Felician University</h3>
+                    <p className={styles.itemSubtitle}>Research Assistant</p>
+                  </div>
+                  <div className={styles.itemRight}>
+                    <span className={styles.itemDate}>May 2024 - Sep 2025</span>
+                    <svg 
+                      className={`${styles.chevron} ${expandedItems.has('work-3') ? styles.chevronExpanded : ''}`}
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              {expandedItems.has('work-3') && (
+                <div className={styles.itemDetails}>
+                  <p className={styles.itemDescription}>
+                    Add your description here. You can write a paragraph or use bullet points below.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -78,31 +191,81 @@ export default function Home() {
           
           <div className={styles.itemList}>
             {/* Education 1 - BPSU */}
-            <div className={styles.item}>
-              <div className={styles.itemLogo}>
-                <span className={`${styles.itemLogoText} ${styles.itemLogoTextRed}`}>BPSU</span>
-              </div>
-              <div className={styles.itemContent}>
-                <div>
-                  <h3 className={styles.itemTitle}>Bataan Peninsula State University</h3>
-                  <p className={styles.itemSubtitle}>Bachelor&apos;s Degree in Information Technology (BSIT)</p>
+            <div className={styles.itemContainer}>
+              <div className={styles.item} onClick={() => toggleItem('edu-1')}>
+                <div className={styles.itemLogo}>
+                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextRed}`}>BPSU</span>
                 </div>
-                <span className={styles.itemDate}>Sep 2020 - Sep 2024</span>
+                <div className={styles.itemContent}>
+                  <div>
+                    <h3 className={styles.itemTitle}>Columbia University</h3>
+                    <p className={styles.itemSubtitle}>Science Honors Program</p>
+                  </div>
+                  <div className={styles.itemRight}>
+                    <span className={styles.itemDate}>Sep 2023 - May 2024</span>
+                    <svg 
+                      className={`${styles.chevron} ${expandedItems.has('edu-1') ? styles.chevronExpanded : ''}`}
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
               </div>
+              {expandedItems.has('edu-1') && (
+                <div className={styles.itemDetails}>
+                  <p className={styles.itemDescription}>
+                    Add your description here. You can write a paragraph or use bullet points below.
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Education 2 - Eastwoods */}
-            <div className={styles.item}>
-              <div className={styles.itemLogo}>
-                <span className={styles.itemLogoTextSmall}>EASTWOODS</span>
-              </div>
-              <div className={styles.itemContent}>
-                <div>
-                  <h3 className={styles.itemTitle}>Eastwoods Academy of Science and Technology</h3>
-                  <p className={styles.itemSubtitle}>Information and Communications Technology (ICT)</p>
+            <div className={styles.itemContainer}>
+              <div className={styles.item} onClick={() => toggleItem('edu-2')}>
+                <div className={styles.itemLogo}>
+                  <span className={styles.itemLogoTextSmall}>EASTWOODS</span>
                 </div>
-                <span className={styles.itemDate}>Sep 2018 - Apr 2020</span>
+                <div className={styles.itemContent}>
+                  <div>
+                    <h3 className={styles.itemTitle}>Bridgewater-Raritan High School</h3>
+                    <p className={styles.itemSubtitle}>High School Diploma</p>
+                  </div>
+                  <div className={styles.itemRight}>
+                    <span className={styles.itemDate}>Sep 2022 - Jun 2026</span>
+                    <svg 
+                      className={`${styles.chevron} ${expandedItems.has('edu-2') ? styles.chevronExpanded : ''}`}
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
               </div>
+              {expandedItems.has('edu-2') && (
+                <div className={styles.itemDetails}>
+                  <p className={styles.itemDescription}>
+                    Add your description here. You can write a paragraph or use bullet points below.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -113,17 +276,42 @@ export default function Home() {
           
           <div className={styles.itemList}>
             {/* Award 1 - IRCITE 2024 */}
-            <div className={styles.item}>
-              <div className={styles.itemLogo}>
-                <span className={`${styles.itemLogoText} ${styles.itemLogoTextRed}`}>BPSU</span>
-              </div>
-              <div className={styles.itemContent}>
-                <div>
-                  <h3 className={styles.itemTitle}>Best Paper in the IT Category</h3>
-                  <p className={styles.itemSubtitle}>IRCITE 2024 - Bataan Peninsula State University</p>
+            <div className={styles.itemContainer}>
+              <div className={styles.item} onClick={() => toggleItem('award-1')}>
+                <div className={styles.itemLogo}>
+                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextRed}`}>BPSU</span>
                 </div>
-                <span className={styles.itemDate}>2024</span>
+                <div className={styles.itemContent}>
+                  <div>
+                    <h3 className={styles.itemTitle}>USA Mathematical Olympiad Qualifier</h3>
+                    <p className={styles.itemSubtitle}>Mathematical Association of America</p>
+                  </div>
+                  <div className={styles.itemRight}>
+                    <span className={styles.itemDate}>2025</span>
+                    <svg 
+                      className={`${styles.chevron} ${expandedItems.has('award-1') ? styles.chevronExpanded : ''}`}
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
               </div>
+              {expandedItems.has('award-1') && (
+                <div className={styles.itemDetails}>
+                  <p className={styles.itemDescription}>
+                    Add your description here. You can write a paragraph or use bullet points below.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -250,7 +438,7 @@ export default function Home() {
         {/* Copyright Footer */}
         <footer className={styles.footer}>
           <p className={styles.footerText}>
-            © 2026 • made by andrew zagula
+            © 2026 Andrew Zagula
           </p>
         </footer>
       </div>
