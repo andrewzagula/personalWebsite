@@ -19,9 +19,9 @@ export default function Home() {
   };
 
   const skills = [
-    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Blazor', 'Tailwind', 'Bootstrap'],
-    ['Framer Motion', 'Vite', '.NET', 'Node', 'Express', 'Firebase', 'Supabase', 'MySQL', 'GitHub'],
-    ['Bitbucket', 'VS Code', 'Figma', 'Photoshop']
+    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Tailwind', 'Java', 'Python', 'C++'],
+    ['Next.js', 'Node.js', 'Firebase', 'Supabase', 'MySQL', 'GitHub'],
+    ['Cursor', 'VS Code', 'Figma', 'Photoshop', 'OpenAI API']
   ];
 
   return (
@@ -41,6 +41,8 @@ export default function Home() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>About</h2>
           <p className={styles.aboutText}>
+            hello
+            {/*
             By the middle of 2024, I graduated with a{" "}
             <span>🎓</span>{" "}
             <a href="#" className={styles.aboutLink}>Bachelor of Science in Information Technology, majoring in Web Development</a>,{" "}
@@ -51,6 +53,7 @@ export default function Home() {
             for a paper presentation and also won the{" "}
             <a href="#" className={styles.aboutLink}>Best Paper in the IT Category</a> at{" "}
             <a href="#" className={styles.aboutLink}>Bataan Peninsula State University.</a>
+            */}
           </p>
         </section>
 
@@ -63,7 +66,7 @@ export default function Home() {
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('work-1')}>
                 <div className={styles.itemLogo}>
-                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>NSPIRE</span>
+                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>BU</span>
                 </div>
                 <div className={styles.itemContent}>
                   <div>
@@ -93,8 +96,7 @@ export default function Home() {
                 <div className={styles.itemDetails}>
                   {/* Add your description or bullets here */}
                   <p className={styles.itemDescription}>
-                    Add your description here. You can write a paragraph or use bullet points below.
-                  </p>
+                    BabyVLM v2: Toward Developmentally Grounded Vision-Language Models with Real Infant-View Data and Cognitive Evaluation Benchmarks                  </p>
                   {/* Example bullets - uncomment and customize as needed */}
                   {/* <ul className={styles.itemBullets}>
                     <li>Responsibility or achievement 1</li>
@@ -138,7 +140,7 @@ export default function Home() {
               {expandedItems.has('work-2') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Add your description here. You can write a paragraph or use bullet points below.
+                  AutoAdv: Automated Adversarial Prompting for Multi-Turn Jailbreaking of Large Language Models; 1st-author @ NeurIPS 2025 Lock-LLM Workshop
                   </p>
                 </div>
               )}
@@ -177,7 +179,7 @@ export default function Home() {
               {expandedItems.has('work-3') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Add your description here. You can write a paragraph or use bullet points below.
+                  AI-Driven Grading and Moderation for Collaborative Projects in Computer Science Education; 2nd-author @ JSCI 2025
                   </p>
                 </div>
               )}
@@ -190,50 +192,12 @@ export default function Home() {
           <h2 className={styles.sectionTitleLarge}>Education</h2>
           
           <div className={styles.itemList}>
-            {/* Education 1 - BPSU */}
-            <div className={styles.itemContainer}>
-              <div className={styles.item} onClick={() => toggleItem('edu-1')}>
-                <div className={styles.itemLogo}>
-                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextRed}`}>BPSU</span>
-                </div>
-                <div className={styles.itemContent}>
-                  <div>
-                    <h3 className={styles.itemTitle}>Columbia University</h3>
-                    <p className={styles.itemSubtitle}>Science Honors Program</p>
-                  </div>
-                  <div className={styles.itemRight}>
-                    <span className={styles.itemDate}>Sep 2023 - May 2024</span>
-                    <svg 
-                      className={`${styles.chevron} ${expandedItems.has('edu-1') ? styles.chevronExpanded : ''}`}
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="20" 
-                      height="20" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              {expandedItems.has('edu-1') && (
-                <div className={styles.itemDetails}>
-                  <p className={styles.itemDescription}>
-                    Add your description here. You can write a paragraph or use bullet points below.
-                  </p>
-                </div>
-              )}
-            </div>
 
-            {/* Education 2 - Eastwoods */}
+            {/* Education 1 - BRHS */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('edu-2')}>
                 <div className={styles.itemLogo}>
-                  <span className={styles.itemLogoTextSmall}>EASTWOODS</span>
+                  <span className={styles.itemLogoTextSmall}>BRHS</span>
                 </div>
                 <div className={styles.itemContent}>
                   <div>
@@ -262,7 +226,7 @@ export default function Home() {
               {expandedItems.has('edu-2') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Add your description here. You can write a paragraph or use bullet points below.
+                    GPA: 5.0; SAT: 1570; Varsity Volleyball (Captain); Key Club (President); DECA (President)
                   </p>
                 </div>
               )}
@@ -275,7 +239,7 @@ export default function Home() {
           <h2 className={styles.sectionTitleLarge}>Awards</h2>
           
           <div className={styles.itemList}>
-            {/* Award 1 - IRCITE 2024 */}
+            {/* Award 1 - USAMO Qualifier */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('award-1')}>
                 <div className={styles.itemLogo}>
@@ -308,7 +272,48 @@ export default function Home() {
               {expandedItems.has('award-1') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Add your description here. You can write a paragraph or use bullet points below.
+                    127.5 AMC 12; 11 AIME
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className={styles.itemList}>
+            {/* Award 2 - USACO Gold */}
+            <div className={styles.itemContainer}>
+              <div className={styles.item} onClick={() => toggleItem('award-2')}>
+                <div className={styles.itemLogo}>
+                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextRed}`}>BPSU</span>
+                </div>
+                <div className={styles.itemContent}>
+                  <div>
+                    <h3 className={styles.itemTitle}>USA Computing Olympiad</h3>
+                    <p className={styles.itemSubtitle}>Gold Division</p>
+                  </div>
+                  <div className={styles.itemRight}>
+                    <span className={styles.itemDate}>2025</span>
+                    <svg 
+                      className={`${styles.chevron} ${expandedItems.has('award-2') ? styles.chevronExpanded : ''}`}
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              {expandedItems.has('award-2') && (
+                <div className={styles.itemDetails}>
+                  <p className={styles.itemDescription}>
+                    Gold Division
                   </p>
                 </div>
               )}
