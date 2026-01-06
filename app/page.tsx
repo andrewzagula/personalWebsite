@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -59,14 +60,22 @@ export default function Home() {
 
         {/* Work Experience Section */}
         <section className={styles.sectionLarge}>
-          <h2 className={styles.sectionTitleLarge}>Work Experience</h2>
+          <h2 className={styles.sectionTitleLarge}>Experience</h2>
           
           <div className={styles.itemList}>
             {/* Job 1 */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('work-1')}>
                 <div className={styles.itemLogo}>
-                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>BU</span>
+                  <Image 
+                    src="/BU.jpg" 
+                    alt="Boston University" 
+                    width={56} 
+                    height={56} 
+                    className={styles.itemLogoImage}
+                    quality={100}
+                    unoptimized
+                  />
                 </div>
                 <div className={styles.itemContent}>
                   <div>
@@ -111,7 +120,15 @@ export default function Home() {
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('work-2')}>
                 <div className={styles.itemLogo}>
-                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>NSPIRE</span>
+                  <Image 
+                    src="/UCB.png" 
+                    alt="UC Berkeley" 
+                    width={56} 
+                    height={56} 
+                    className={styles.itemLogoImage}
+                    quality={100}
+                    unoptimized
+                  />
                 </div>
                 <div className={styles.itemContent}>
                   <div>
@@ -150,7 +167,15 @@ export default function Home() {
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('work-3')}>
                 <div className={styles.itemLogo}>
-                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextBlue}`}>NSPIRE</span>
+                  <Image 
+                    src="/FLC.png" 
+                    alt="Felician University" 
+                    width={56} 
+                    height={56} 
+                    className={styles.itemLogoImage}
+                    quality={100}
+                    unoptimized
+                  />
                 </div>
                 <div className={styles.itemContent}>
                   <div>
@@ -197,7 +222,15 @@ export default function Home() {
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('edu-2')}>
                 <div className={styles.itemLogo}>
-                  <span className={styles.itemLogoTextSmall}>BRHS</span>
+                  <Image 
+                    src="/BR.png" 
+                    alt="Bridgewater-Raritan High School" 
+                    width={56} 
+                    height={56} 
+                    className={styles.itemLogoImage}
+                    quality={100}
+                    unoptimized
+                  />
                 </div>
                 <div className={styles.itemContent}>
                   <div>
@@ -242,9 +275,6 @@ export default function Home() {
             {/* Award 1 - USAMO Qualifier */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('award-1')}>
-                <div className={styles.itemLogo}>
-                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextRed}`}>BPSU</span>
-                </div>
                 <div className={styles.itemContent}>
                   <div>
                     <h3 className={styles.itemTitle}>USA Mathematical Olympiad Qualifier</h3>
@@ -283,9 +313,6 @@ export default function Home() {
             {/* Award 2 - USACO Gold */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('award-2')}>
-                <div className={styles.itemLogo}>
-                  <span className={`${styles.itemLogoText} ${styles.itemLogoTextRed}`}>BPSU</span>
-                </div>
                 <div className={styles.itemContent}>
                   <div>
                     <h3 className={styles.itemTitle}>USA Computing Olympiad</h3>
@@ -314,6 +341,44 @@ export default function Home() {
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
                     Gold Division
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className={styles.itemList}>
+            {/* Award 3 - 5x AIME Qualifier */}
+            <div className={styles.itemContainer}>
+              <div className={styles.item} onClick={() => toggleItem('award-3')}>
+                <div className={styles.itemContent}>
+                  <div>
+                    <h3 className={styles.itemTitle}>5x AIME Qualifier</h3>
+                    <p className={styles.itemSubtitle}>Mathematical Association of America</p>
+                  </div>
+                  <div className={styles.itemRight}>
+                    <span className={styles.itemDate}>2025</span>
+                    <svg 
+                      className={`${styles.chevron} ${expandedItems.has('award-3') ? styles.chevronExpanded : ''}`}
+                      xmlns="http://www.w3.org/2000/svg" 
+                      width="20" 
+                      height="20" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              {expandedItems.has('award-3') && (
+                <div className={styles.itemDetails}>
+                  <p className={styles.itemDescription}>
+                    5x AIME Qualifier
                   </p>
                 </div>
               )}

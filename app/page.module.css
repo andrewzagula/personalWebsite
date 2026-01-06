@@ -163,12 +163,18 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: #f9fafb;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.itemLogoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: auto;
 }
 
 .itemLogoText {
