@@ -144,6 +144,29 @@
   margin: 0;
 }
 
+.arxivLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 12px;
+  transition: color 0.2s;
+}
+
+.arxivLink:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.arxivLink svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
 .itemBullets {
   color: #4b5563;
   margin: 0;
