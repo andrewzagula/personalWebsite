@@ -34,27 +34,7 @@ export default function Home() {
             Hi, I&apos;m Andrew 👋
           </h1>
           <p className={styles.heroDescription}>
-            Senior at Bridgewater-Raritan High School researching AI/ML with published work in vision-language models and LLM security. USAMO qualifier and USACO Gold competitor.
-          </p>
-        </section>
-
-        {/* About Section */}
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>About</h2>
-          <p className={styles.aboutText}>
-            I&apos;m a high school student and researcher passionate about artificial intelligence and machine learning. 
-            I&apos;ve had the opportunity to conduct research at{" "}
-            <a href="https://www.bu.edu" target="_blank" rel="noopener noreferrer" className={styles.aboutLink}>Boston University</a>,{" "}
-            <a href="https://www.berkeley.edu" target="_blank" rel="noopener noreferrer" className={styles.aboutLink}>UC Berkeley</a>, and{" "}
-            <a href="https://www.felician.edu" target="_blank" rel="noopener noreferrer" className={styles.aboutLink}>Felician University</a>,{" "}
-            working on projects ranging from vision-language models to LLM security and educational technology. 
-            My research has been published at conferences including{" "}
-            <span className={styles.aboutLink}>NeurIPS 2025</span> and{" "}
-            <span className={styles.aboutLink}>JSCI 2025</span>.{" "}
-            Beyond research, I&apos;m a{" "}
-            <span className={styles.aboutLink}>USA Mathematical Olympiad qualifier</span>,{" "}
-            <span className={styles.aboutLink}>USACO Gold competitor</span>, and{" "}
-            <span className={styles.aboutLink}>5x AIME qualifier</span>.
+            I'm a high school senior from New Jersey, interested in applied ML, low-latency infrastructure, & distributed systems.
           </p>
         </section>
 
@@ -105,7 +85,8 @@ export default function Home() {
                 <div className={styles.itemDetails}>
                   {/* Add your description or bullets here */}
                   <p className={styles.itemDescription}>
-                    BabyVLM v2: Toward Developmentally Grounded Vision-Language Models with Real Infant-View Data and Cognitive Evaluation Benchmarks                  </p>
+                    Pre-training & benchmarking sample-efficient vision foundation models; co-author @ IEEE CVPR 2026
+                  </p>
                   <a href="https://arxiv.org/abs/2512.10932" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -165,7 +146,7 @@ export default function Home() {
               {expandedItems.has('work-2') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                  AutoAdv: Automated Adversarial Prompting for Multi-Turn Jailbreaking of Large Language Models; 1st-author @ NeurIPS 2025 Lock-LLM Workshop
+                    Automated adversarial prompting for multi-turn LLM jailbreaking; first-author @ NeurIPS 2025 Lock-LLM Workshop
                   </p>
                   <a href="https://arxiv.org/abs/2511.02376" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -220,7 +201,7 @@ export default function Home() {
               {expandedItems.has('work-3') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                  AI-Driven Grading and Moderation for Collaborative Projects in Computer Science Education; 2nd-author @ JSCI 2025
+                    AI-assisted software analytics for educational technology; second-author @ JSCI 2025
                   </p>
                   <a href="https://arxiv.org/abs/2510.03998" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -284,6 +265,8 @@ export default function Home() {
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
                     GPA: 5.0; SAT: 1570; Varsity Volleyball (Captain); Key Club (President); DECA (President)
+                    <br /><br />
+                    Notable coursework: CS112 (Data Structures) @ Rutgers University, AP Computer Science A, AP Calculus BC, Calculus III, Differential Equations, Intro to Linear Algebra, AP Statistics, AP Physics C, AP Biology, AP Chemistry
                   </p>
                 </div>
               )}
@@ -383,10 +366,10 @@ export default function Home() {
                   <span className={styles.projectYear}>2025</span>
                 </div>
                 <p className={styles.projectDescription}>
-                  Automated Adversarial Prompting for Multi-Turn Jailbreaking of Large Language Models. Research project on LLM security and adversarial attacks, published at NeurIPS 2025 Lock-LLM Workshop.
+                  Multi-turn attack pipeline for automated generation of adversarial prompts for large language model jailbreaking.
                 </p>
                 <div className={styles.projectTech}>
-                  {['Python', 'LLM', 'Security', 'AI Research'].map((tech) => (
+                  {['Python', 'OpenAI API', 'Together AI API', 'xAI API'].map((tech) => (
                     <span key={tech} className={styles.techTag}>{tech}</span>
                   ))}
                 </div>
@@ -414,10 +397,10 @@ export default function Home() {
                   <span className={styles.projectYear}>2025</span>
                 </div>
                 <p className={styles.projectDescription}>
-                  A platform connecting alumni and students, facilitating networking, mentorship, and career opportunities within educational communities.
+                  Full-stack platform connecting alumni and students, facilitating networking, mentorship, and opportunities within high school communities.
                 </p>
                 <div className={styles.projectTech}>
-                  {['React', 'JavaScript', 'Next.js', 'Node.js', 'Firebase', 'Tailwind', 'Vercel'].map((tech) => (
+                  {['React', 'JavaScript', 'Next.js', 'Node.js', 'Firebase', 'Tailwind CSS', 'Stripe API', 'Vercel'].map((tech) => (
                     <span key={tech} className={styles.techTag}>{tech}</span>
                   ))}
                 </div>
@@ -447,11 +430,9 @@ export default function Home() {
           <div className={styles.contactTag}>Contact</div>
           <h2 className={styles.contactTitle}>Get in Touch</h2>
           <p className={styles.contactText}>
-            Want to chat? Just shoot me a DM with a direct question on{" "}
-            <a href="https://www.instagram.com/andrewzagulaa/" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Instagram</a>{" "}
-            or{" "}
-            <a href="mailto:andrewzagula800@gmail.com" className={styles.contactLink}>drop me an email</a>
-            , and I&apos;ll reply as soon as I can.
+            Want to chat? Just shoot me a DM on any of my socials
+            <br />
+            or <a href="mailto:andrewzagula800@gmail.com" className={styles.contactLink}>drop me an email</a>, and I&apos;ll reply ASAP!
           </p>
         </section>
 
