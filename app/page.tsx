@@ -350,22 +350,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.itemList}>
-            {/* Award 2 - USACO Gold */}
-            <div className={styles.itemContainer}>
-              <div className={styles.item}>
-                <div className={styles.itemContent}>
-                  <div>
-                    <h3 className={styles.itemTitle}>USA Computing Olympiad</h3>
-                    <p className={styles.itemSubtitle}>Gold Division</p>
-                  </div>
-                  <div className={styles.itemRight}>
-                    <span className={styles.itemDate}>Jan 2024</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Removed USACO Gold award section */}
 
           <div className={styles.itemList}>
             {/* Award 3 - 5x AIME Qualifier */}
