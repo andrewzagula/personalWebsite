@@ -170,7 +170,7 @@ export default function Home() {
                 <div className={styles.itemContent}>
                   <div>
                     <h3 className={styles.itemTitle}>Boston University</h3>
-                    <p className={styles.itemSubtitle}>Student Researcher</p>
+                    <p className={styles.itemSubtitle}>Research in Science & Engineering Internship</p>
                   </div>
                   <div className={styles.itemRight}>
                     <span className={styles.itemDate}>Jun 2025 - Aug 2025</span>
@@ -256,7 +256,7 @@ export default function Home() {
               {expandedItems.has('work-3') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    AI-assisted software analytics for educational technology; second-author @ JSCI 2025
+                    AI-assisted software analytics for educational technology
                   </p>
                   <a href="https://arxiv.org/abs/2510.03998" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -440,7 +440,7 @@ export default function Home() {
                   Full-stack platform connecting alumni and students, facilitating networking, mentorship, and opportunities within high school communities.
                 </p>
                 <div className={styles.projectTech}>
-                  {['React', 'JavaScript', 'Next.js', 'Node.js', 'Firebase', 'Tailwind CSS', 'Stripe API', 'Vercel'].map((tech) => (
+                  {['React', 'JavaScript', 'Next.js', 'Node.js', 'Firebase', 'Tailwind CSS', 'Stripe API', 'REST API'].map((tech) => (
                     <span key={tech} className={styles.techTag}>{tech}</span>
                   ))}
                 </div>
