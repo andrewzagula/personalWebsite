@@ -14,7 +14,6 @@ body {
   min-height: 100vh;
 }
 
-/* Force light mode */
 html {
   color-scheme: light only;
 }
@@ -23,7 +22,6 @@ html {
   color-scheme: light only;
 }
 
-/* Link styles - removed global underline since we're handling it per-element */
 a:hover {
   opacity: 0.8;
 }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { TypeAnimation } from 'react-type-animation';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -19,31 +20,29 @@ export default function Home() {
     });
   };
 
-  const skills = [
-    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Tailwind', 'Java', 'Python', 'C++'],
-    ['Next.js', 'Node.js', 'Firebase', 'Supabase', 'MySQL', 'GitHub'],
-    ['Cursor', 'VS Code', 'Figma', 'Photoshop', 'OpenAI API']
-  ];
-
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        {/* Hero Section */}
         <section className={styles.heroSection}>
           <h1 className={styles.heroTitle}>
-            Hi, I&apos;m Andrew 👋
+            <TypeAnimation
+              sequence={["Hi, I'm Andrew 👋", 2000]}
+              wrapper="span"
+              speed={25}
+              cursor={true}
+              repeat={0}
+              className={styles.heroTypewriter}
+            />
           </h1>
           <p className={styles.heroDescription}>
             I'm a high school senior from New Jersey, interested in applied ML, low-latency infrastructure, & distributed systems.
           </p>
         </section>
 
-        {/* Work Experience Section */}
         <section className={styles.sectionLarge}>
           <h2 className={styles.sectionTitleLarge}>Experience</h2>
           
           <div className={styles.itemList}>
-            {/* Job 1 - Alumhub */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('work-4')}>
                 <div className={styles.itemLogo}>
@@ -98,7 +97,6 @@ export default function Home() {
               )}
             </div>
 
-            {/* Job 2 - UC Berkeley */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('work-2')}>
                 <div className={styles.itemLogo}>
@@ -153,7 +151,6 @@ export default function Home() {
               )}
             </div>
 
-            {/* Job 3 - Boston University */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('work-1')}>
                 <div className={styles.itemLogo}>
@@ -193,7 +190,6 @@ export default function Home() {
               </div>
               {expandedItems.has('work-1') && (
                 <div className={styles.itemDetails}>
-                  {/* Add your description or bullets here */}
                   <p className={styles.itemDescription}>
                     Pre-training & benchmarking sample-efficient vision foundation models; co-author @ IEEE CVPR 2026
                   </p>
@@ -205,17 +201,10 @@ export default function Home() {
                     </svg>
                     arXiv
                   </a>
-                  {/* Example bullets - uncomment and customize as needed */}
-                  {/* <ul className={styles.itemBullets}>
-                    <li>Responsibility or achievement 1</li>
-                    <li>Responsibility or achievement 2</li>
-                    <li>Responsibility or achievement 3</li>
-                  </ul> */}
                 </div>
               )}
             </div>
 
-            {/* Job 4 - Felician University */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('work-3')}>
                 <div className={styles.itemLogo}>
@@ -272,13 +261,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Education Section */}
         <section className={styles.sectionLarge}>
           <h2 className={styles.sectionTitleLarge}>Education</h2>
           
           <div className={styles.itemList}>
 
-            {/* Education 1 - BRHS */}
             <div className={styles.itemContainer}>
               <div className={styles.item} onClick={() => toggleItem('edu-2')}>
                 <div className={styles.itemLogo}>
@@ -329,12 +316,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Awards Section */}
         <section className={styles.sectionLarge}>
           <h2 className={styles.sectionTitleLarge}>Awards</h2>
           
           <div className={styles.itemList}>
-            {/* Award 1 - USAMO Qualifier */}
             <div className={styles.itemContainer}>
               <div className={styles.item}>
                 <div className={styles.itemContent}>
@@ -350,10 +335,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Removed USACO Gold award section */}
-
           <div className={styles.itemList}>
-            {/* Award 3 - 5x AIME Qualifier */}
             <div className={styles.itemContainer}>
               <div className={styles.item}>
                 <div className={styles.itemContent}>
@@ -370,34 +352,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills Section */}
         <section className={styles.sectionLarge}>
-          <h2 className={styles.sectionTitle}>Skills</h2>
-          
-          <div className={styles.skillsContainer}>
-            {skills.map((row, rowIndex) => (
-              <div key={rowIndex} className={styles.skillsRow}>
-                {row.map((skill) => (
-                  <span key={skill} className={styles.skillBadge}>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Projects Section */}
-        <section className={styles.sectionLarge}>
-          <div className={styles.projectsTag}>My Projects</div>
-          <h2 className={styles.projectsTitle}>Check out my latest works.</h2>
+          <div className={styles.projectsTag}>Featured Projects</div>
 
           <div className={styles.projectsGrid}>
-            {/* AutoAdv Project */}
             <div className={styles.projectCard}>
               <div className={styles.projectImage}>
                 <div className={styles.projectImagePlaceholder}>
-                  {/* Placeholder for AutoAdv screenshot */}
                 </div>
               </div>
               <div className={styles.projectContent}>
@@ -424,11 +385,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Alumhub Project */}
             <div className={styles.projectCard}>
               <div className={styles.projectImage}>
                 <div className={styles.projectImagePlaceholder}>
-                  {/* Placeholder for Alumhub screenshot */}
                 </div>
               </div>
               <div className={styles.projectContent}>
@@ -459,10 +418,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section className={styles.sectionLarge}>
-          <div className={styles.contactTag}>Contact</div>
-          <h2 className={styles.contactTitle}>Get in Touch</h2>
           <p className={styles.contactText}>
             Want to chat? Just shoot me a DM on any of my socials
             <br />
@@ -470,7 +426,6 @@ export default function Home() {
           </p>
         </section>
 
-        {/* Copyright Footer */}
         <footer className={styles.footer}>
           <p className={styles.footerText}>
             © 2026 Andrew Zagula
@@ -478,7 +433,6 @@ export default function Home() {
         </footer>
       </div>
 
-      {/* Floating Navigation */}
       <nav className={styles.nav}>
         <a href="#" className={styles.navLink} aria-label="Home">
           <svg xmlns="http://www.w3.org/2000/svg" className={styles.navIcon} fill="currentColor" viewBox="0 0 24 24">

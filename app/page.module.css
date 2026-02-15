@@ -13,7 +13,6 @@
   padding-bottom: 128px;
 }
 
-/* Hero Section */
 .heroSection {
   padding-bottom: 48px;
 }
@@ -25,27 +24,23 @@
   color: black;
 }
 
+.heroTypewriter::after {
+  font-weight: 200;
+  margin-left: 0.5rem;
+}
+
 .heroDescription {
   font-size: 18px;
   color: #4b5563;
   margin: 0;
 }
 
-/* Section Styles */
 .section {
   padding-bottom: 48px;
 }
 
 .sectionLarge {
   padding-bottom: 48px;
-}
-
-.sectionTitle {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 12px;
-  margin-top: 0;
-  color: black;
 }
 
 .sectionTitleLarge {
@@ -56,7 +51,6 @@
   color: black;
 }
 
-/* About Section */
 .aboutText {
   color: #4b5563;
   margin: 0;
@@ -73,7 +67,6 @@
   opacity: 0.7;
 }
 
-/* Experience & Education Items */
 .itemList {
   display: flex;
   flex-direction: column;
@@ -254,29 +247,6 @@
   white-space: nowrap;
 }
 
-/* Skills Section */
-.skillsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.skillsRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skillBadge {
-  background-color: #18181b;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-/* Floating Navigation */
 .nav {
   position: fixed;
   bottom: 24px;
@@ -319,11 +289,6 @@
   transform: scale(1.05);
 }
 
-/* Projects Section */
-.sectionLarge:has(.projectsTag) {
-  padding-top: 40px;
-}
-
 .projectsTag {
   display: block;
   background-color: #000000;
@@ -332,20 +297,11 @@
   border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   text-align: center;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-}
-
-.projectsTitle {
-  font-size: 36px;
-  font-weight: 800;
-  margin-bottom: 30px;
-  margin-top: 0;
-  color: black;
-  text-align: center;
 }
 
 .projectsSubtitle {
@@ -466,35 +422,6 @@
   flex-shrink: 0;
 }
 
-/* Contact Section */
-.sectionLarge:has(.contactTag) {
-  padding-top: 40px;
-}
-
-.contactTag {
-  display: block;
-  background-color: #000000;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  text-align: center;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contactTitle {
-  font-size: 36px;
-  font-weight: 800;
-  margin-bottom: 12px;
-  margin-top: 0;
-  color: black;
-  text-align: center;
-}
-
 .contactText {
   font-size: 16px;
   color: #6b7280;
@@ -517,7 +444,6 @@
   color: #1d4ed8;
 }
 
-/* Footer */
 .footer {
   padding-top: 48px;
   text-align: center;
@@ -529,7 +455,6 @@
   margin: 0;
 }
 
-/* Responsive Styles for Education, Work Experience, and Awards Items */
 @media (max-width: 640px) {
   .container {
     padding-left: 20px;
