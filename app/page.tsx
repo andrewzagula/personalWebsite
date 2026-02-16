@@ -357,14 +357,9 @@ export default function Home() {
 
           <div className={styles.projectsGrid}>
             <div className={styles.projectCard}>
-              <div className={styles.projectImage}>
-                <div className={styles.projectImagePlaceholder}>
-                </div>
-              </div>
               <div className={styles.projectContent}>
                 <div className={styles.projectHeader}>
                   <h3 className={styles.projectTitle}>AutoAdv</h3>
-                  <span className={styles.projectYear}>2025</span>
                 </div>
                 <p className={styles.projectDescription}>
                   Multi-turn attack pipeline for automated generation of adversarial prompts for large language model jailbreaking.
@@ -386,20 +381,15 @@ export default function Home() {
             </div>
 
             <div className={styles.projectCard}>
-              <div className={styles.projectImage}>
-                <div className={styles.projectImagePlaceholder}>
-                </div>
-              </div>
               <div className={styles.projectContent}>
                 <div className={styles.projectHeader}>
                   <h3 className={styles.projectTitle}>Alumhub</h3>
-                  <span className={styles.projectYear}>2025</span>
                 </div>
                 <p className={styles.projectDescription}>
                   Full-stack platform connecting alumni and students, facilitating networking, mentorship, and opportunities within high school communities.
                 </p>
                 <div className={styles.projectTech}>
-                  {['React', 'JavaScript', 'Next.js', 'Node.js', 'Firebase', 'Tailwind CSS', 'Stripe API', 'REST API'].map((tech) => (
+                  {['Javascript', 'CSS', 'React', 'Next.js', 'Node.js', 'Firebase', 'Stripe'].map((tech) => (
                     <span key={tech} className={styles.techTag}>{tech}</span>
                   ))}
                 </div>
@@ -415,22 +405,43 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <div className={styles.projectCard}>
+              <div className={styles.projectContent}>
+                <div className={styles.projectHeader}>
+                  <h3 className={styles.projectTitle}>Yu&apos;s Elite Education</h3>
+                </div>
+                <p className={styles.projectDescription}>
+                  Website for an after-school tutoring business. Built the frontend, implemented custom forms, and developed an admin dashboard for managing submissions.
+                </p>
+                <div className={styles.projectTech}>
+                  {['TypeScript', 'Tailwind CSS', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Neon', 'Prisma'].map((tech) => (
+                    <span key={tech} className={styles.techTag}>{tech}</span>
+                  ))}
+                </div>
+                <div className={styles.projectLinks}>
+                  <a href="https://yuselite.education" target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    Website
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         <section className={styles.sectionLarge}>
           <p className={styles.contactText}>
-            Want to chat? Just shoot me a DM on any of my socials
+            Feel free to reach out on any of my socials
             <br />
             or <a href="mailto:andrewzagula800@gmail.com" className={styles.contactLink}>drop me an email</a>, and I&apos;ll reply ASAP!
           </p>
         </section>
 
-        <footer className={styles.footer}>
-          <p className={styles.footerText}>
-            © 2026 Andrew Zagula
-          </p>
-        </footer>
       </div>
 
       <nav className={styles.nav}>
