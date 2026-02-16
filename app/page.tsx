@@ -362,7 +362,7 @@ export default function Home() {
                   <h3 className={styles.projectTitle}>AutoAdv</h3>
                 </div>
                 <p className={styles.projectDescription}>
-                  Multi-turn attack pipeline for automated generation of adversarial prompts for large language model jailbreaking.
+                  Multi-turn pipeline for automated generation of adversarial prompts for jailbreaking LLMs.
                 </p>
                 <div className={styles.projectTech}>
                   {['Python', 'OpenAI API', 'Together AI API', 'xAI API'].map((tech) => (
@@ -386,7 +386,7 @@ export default function Home() {
                   <h3 className={styles.projectTitle}>Alumhub</h3>
                 </div>
                 <p className={styles.projectDescription}>
-                  Full-stack platform connecting alumni and students, facilitating networking, mentorship, and opportunities within high school communities.
+                  Full-stack platform connecting alumni and students within high school communities.
                 </p>
                 <div className={styles.projectTech}>
                   {['Javascript', 'CSS', 'React', 'Next.js', 'Node.js', 'Firebase', 'Stripe'].map((tech) => (
@@ -412,7 +412,7 @@ export default function Home() {
                   <h3 className={styles.projectTitle}>Yu&apos;s Elite Education</h3>
                 </div>
                 <p className={styles.projectDescription}>
-                  Website for an after-school tutoring business. Built the frontend, implemented custom forms, and developed an admin dashboard for managing submissions.
+                  After-school tutoring website with custom forms and administrator management.
                 </p>
                 <div className={styles.projectTech}>
                   {['TypeScript', 'Tailwind CSS', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Neon', 'Prisma'].map((tech) => (
