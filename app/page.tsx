@@ -324,11 +324,11 @@ export default function Home() {
               <div className={styles.item}>
                 <div className={styles.itemContent}>
                   <div>
-                    <h3 className={styles.itemTitle}>USA Mathematical Olympiad Qualifier</h3>
-                    <p className={styles.itemSubtitle}>127.5 AMC 12; 11 AIME</p>
+                    <h3 className={styles.itemTitle}>2x USA Mathematical Olympiad Qualifier</h3>
+                    <p className={styles.itemSubtitle}>139.5 AMC 12; 12 AIME</p>
                   </div>
                   <div className={styles.itemRight}>
-                    <span className={styles.itemDate}>Mar 2025</span>
+                    <span className={styles.itemDate}>Mar 2025 - Feb 2026</span>
                   </div>
                 </div>
               </div>
