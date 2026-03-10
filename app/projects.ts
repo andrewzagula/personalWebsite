@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description: 'System-wide AI layer that rewrites your messy thoughts into polished inputs.',
     tech: ['Electron', 'React', 'TypeScript', 'Node.js', 'SQLite', 'OpenAI API', 'Zustand', 'Zod'],
     actions: [
-      { kind: 'source', label: 'Source', href: 'https://github.com/andrewzagula' },
+      { kind: 'source', label: 'Source (coming soon)' },
     ],
   },
   {
