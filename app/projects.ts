@@ -29,7 +29,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: 'DistillAI',
+    title: 'PolishAI',
     description: 'System-wide AI layer that rewrites your messy thoughts into polished inputs.',
     tech: ['Electron', 'React', 'TypeScript', 'Node.js', 'SQLite', 'OpenAI API', 'Zustand', 'Zod'],
     actions: [
