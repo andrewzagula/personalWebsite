@@ -17,7 +17,7 @@ export const projects: Project[] = [
     description: 'Agentic AI research assistant exploring arXiv to help answer research questions.',
     tech: ['Python', 'TypeScript', 'SQL', 'FastAPI', 'Next.js', 'React', 'LangGraph', 'LangChain', 'PostgreSQL', 'pgvector', 'OpenAI API'],
     actions: [
-      { kind: 'source', label: 'Source', href: 'https://github.com/andrewzagula'},
+      { kind: 'source', label: 'Source (coming soon)' },
     ],
   },
   {
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     description: 'Research backtesting platform for simulating trading strategy performance.',
     tech: ['Python', 'Polaris', 'NumPy', 'DuckDB', 'FastAPI', 'Uvicorn', 'Parquet', 'PostgreSQL', 'Redis', 'Next.js', 'Tailwind CSS', 'Plotly', 'Docker', 'TypeScript'],
     actions: [
-      { kind: 'source', label: 'Source', href: 'https://github.com/andrewzagula'},
+      { kind: 'source', label: 'Source (coming soon)' },
     ],
   },
   {
