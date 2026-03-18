@@ -45,24 +45,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: 'Alumhub',
-    description: 'Student-alumni social networking platform; $25k+ from Google, Vercel, Amazon, Notion, Microsoft, Datadog, & more',
-    tech: ['Javascript', 'CSS', 'React', 'Next.js', 'Node.js', 'Firebase', 'Stripe'],
-    actions: [
-      { kind: 'source', label: 'Source (private)' },
-      { kind: 'website', label: 'Site', href: 'https://thealumhub.com' },
-    ],
-  },
-  {
-    title: "Yu's Elite Education",
-    description: 'After-school tutoring website with custom forms and administrator management.',
-    tech: ['TypeScript', 'Tailwind CSS', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Neon', 'Prisma'],
-    actions: [
-      { kind: 'source', label: 'Source (private)' },
-      { kind: 'website', label: 'Site', href: 'https://yuselite.education' },
-    ],
-  },
-  {
     title: 'AUDIT',
     description: 'RAG-powered CLI tool scanning local repositories for security vulnerabilities.',
     tech: ['Python', 'Typer', 'Pydantic', 'OpenAI API', 'ChromaDB', 'SQLite', 'FastAPI', 'Node.js', 'npm'],
