@@ -46,7 +46,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Alumhub',
-    description: 'Student-alumni social networking platform. $25k+ from Google, Vercel, Amazon, & more',
+    description: 'Student-alumni social networking platform; $25k+ from Google, Vercel, Amazon, Notion & more',
     tech: ['Javascript', 'CSS', 'React', 'Next.js', 'Node.js', 'Firebase', 'Stripe'],
     actions: [
       { kind: 'source', label: 'Source (private)' },
