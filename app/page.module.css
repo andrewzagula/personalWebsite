@@ -4,20 +4,24 @@
 }
 
 .container {
-  max-width: 720px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
   padding: 6rem 0;
 }
 
 .heroSection {
-  padding-bottom: 48px;
+  padding-bottom: 0;
 }
 
 .heroTitle {
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 16px;
+  margin-top: 0;
   color: black;
 }
 
@@ -32,12 +36,60 @@
   margin: 0;
 }
 
+.heroSocials {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.heroSocialLink {
+  color: #374151;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.heroSocialLink:hover {
+  color: #111827;
+  border-color: #e5e7eb;
+}
+
+.heroSocialIcon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.heroSocialIcon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.heroSocialLabel {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
 .section {
-  padding-bottom: 48px;
+  padding-bottom: 0;
 }
 
 .sectionLarge {
-  padding-bottom: 48px;
+  padding-bottom: 0;
 }
 
 .sectionTitleLarge {
@@ -244,47 +296,6 @@
   white-space: nowrap;
 }
 
-.nav {
-  position: fixed;
-  bottom: 36px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  border-radius: 9999px;
-  border: 1px solid #e5e7eb;
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  z-index: 50;
-}
-
-.navLink {
-  color: #4b5563;
-  text-decoration: none;
-  display: flex;
-  padding: 8px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.navLink:hover {
-  color: #111827;
-  background-color: #f3f4f6;
-  transform: scale(1.05);
-}
-
-.navIcon {
-  width: 20px;
-  height: 20px;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.navLink:hover .navIcon {
-  transform: scale(1.05);
-}
-
 .projectsTag {
   display: block;
   background-color: #000000;
@@ -314,15 +325,15 @@
 }
 
 .projectCard {
-  border: 1px solid #e5e7eb;
+  border: 1px solid transparent;
   border-radius: 12px;
   overflow: hidden;
   background-color: white;
-  transition: transform 0.3s ease;
+  transition: border-color 0.2s ease;
 }
 
 .projectCard:hover {
-  transform: scale(1.02);
+  border-color: #e5e7eb;
 }
 
 .projectImage {
@@ -401,11 +412,6 @@
   background-color: #000000;
   color: white;
   text-decoration: none;
-  transition: background-color 0.2s;
-}
-
-.projectLink:hover {
-  background-color: #1a1a1a;
 }
 
 .projectLinkDisabled {
@@ -460,7 +466,7 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 60px;
-    padding-bottom: 100px;
+    padding-bottom: 64px;
   }
 
   .item {
@@ -522,7 +528,7 @@
     padding-left: 16px;
     padding-right: 16px;
     padding-top: 48px;
-    padding-bottom: 80px;
+    padding-bottom: 56px;
   }
 
   .item {
