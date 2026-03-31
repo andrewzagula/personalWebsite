@@ -237,7 +237,7 @@ export default function Home() {
                 <div className={styles.itemContent}>
                   <div>
                     <h3 className={styles.itemTitle}>Boston University</h3>
-                    <p className={styles.itemSubtitle}>Research in Science & Engineering Internship</p>
+                    <p className={styles.itemSubtitle}>Research Intern (RISE)</p>
                   </div>
                   <div className={styles.itemRight}>
                     <span className={styles.itemDate}>Jun 2025 - Aug 2025</span>
