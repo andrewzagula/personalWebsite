@@ -158,10 +158,6 @@
   transform: rotate(180deg);
 }
 
-.item:hover .chevron {
-  color: #6b7280;
-}
-
 .itemDetails {
   padding: 20px;
   padding-top: 0;

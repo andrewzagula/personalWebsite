@@ -14,7 +14,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: 'PaperTrail',
-    description: 'Agentic AI research assistant exploring arXiv to answer and implement research questions',
+    description: 'AI research assistant for discovering, understanding, and building on arXiv papers',
     tech: ['Python', 'TypeScript', 'FastAPI', 'Next.js', 'React', 'OpenAI API', 'LangChain', 'LangGraph', 'SQLite', 'SQLAlchemy', 'ChromaDB', 'Tailwind CSS', 'Pydantic'],
     actions: [
       { kind: 'source', label: 'Source', href: 'https://github.com/andrewzagula/PaperTrail' },
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Rewind',
-    description: 'AI-native research backtesting platform for simulating trading strategy performance',
+    description: 'AI-native trading research platform for developing and simulating trading strategies',
     tech: ['Python', 'FastAPI', 'Next.js', 'TypeScript', 'OpenAI API', 'DuckDB', 'PostgreSQL', 'Redis', 'Polars', 'NumPy', 'Plotly', 'SQLAlchemy', 'Pydantic', 'Tailwind CSS', 'Docker'],
     actions: [
       { kind: 'source', label: 'Source', href: 'https://github.com/andrewzagula/Rewind' },
@@ -30,7 +30,7 @@ export const projects: Project[] = [
   },
   {
     title: 'AutoAdv',
-    description: 'Automated adversarial prompting pipeline for multi-turn LLM jailbreaking',
+    description: 'Adaptive adversarial prompting pipeline for multi-turn LLM jailbreaking',
     tech: ['Python', 'OpenAI API', 'Together AI API', 'xAI API'],
     actions: [
       { kind: 'source', label: 'Source', href: 'https://github.com/AAN-AutoAdv/AutoAdv' },
@@ -38,7 +38,7 @@ export const projects: Project[] = [
   },
   {
     title: 'AUDIT',
-    description: 'RAG-powered CLI tool scanning local repositories for security vulnerabilities',
+    description: 'AI-powered CLI security scanner for detecting vulnerabilities in local repositories',
     tech: ['Python', 'OpenAI API', 'Typer', 'Pydantic', 'SQLite', 'ChromaDB', 'PyInstaller', 'Node.js'],
     actions: [
       { kind: 'source', label: 'Source', href: 'https://github.com/AryaVaidya08/AUDIT' },
