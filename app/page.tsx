@@ -196,7 +196,7 @@ export default function Home() {
               {expandedItems.has('work-2') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Adaptive adversarial prompting framework for multi-turn LLM jailbreaking; first-author @ NeurIPS 2025 Lock-LLM
+                    Adaptive adversarial prompting for multi-turn LLM jailbreaking; first-author @ NeurIPS 2025 Lock-LLM
                   </p>
                   <a href="https://arxiv.org/abs/2511.02376" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
