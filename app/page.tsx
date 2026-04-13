@@ -250,7 +250,7 @@ export default function Home() {
               {expandedItems.has('work-1') && (
                 <div className={styles.itemDetails}>
                   <p className={styles.itemDescription}>
-                    Pre-training & benchmarking sample-efficient vision foundation models; co-author @ CVPR 2026
+                    Pre-training & benchmarking sample-efficient vision language models; co-author @ CVPR 2026
                   </p>
                   <div className={styles.itemLinks}>
                     <a href="https://arxiv.org/abs/2512.10932" target="_blank" rel="noopener noreferrer" className={styles.arxivLink}>
